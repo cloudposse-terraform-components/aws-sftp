@@ -58,7 +58,7 @@ data "aws_s3_bucket" "default" {
 
 module "security_group" {
   source  = "cloudposse/security-group/aws"
-  version = "1.0.1"
+  version = "2.2.0"
 
   vpc_id = module.vpc.outputs.vpc_id
   rules  = var.security_group_rules
