@@ -74,7 +74,7 @@ data "aws_route53_zone" "default" {
 
 module "sftp" {
   source  = "cloudposse/transfer-sftp/aws"
-  version = "2.2.0"
+  version = "2.3.0"
 
   domain                 = var.domain
   sftp_users             = local.sftp_users
