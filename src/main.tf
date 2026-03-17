@@ -21,7 +21,7 @@ locals {
     user => merge(
       val,
       lookup(module.s3_context, user, null) != null ? {
-        s3_bucket_name = lookup(module.s3_context, user).id
+        s3_bucket_name = module.s3_context[user].id
       } : {},
       # This has to be added otherwise terraform may throw an error if the user object is different
       {
